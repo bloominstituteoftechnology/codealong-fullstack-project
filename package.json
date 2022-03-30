@@ -8,7 +8,10 @@
     "heroku-postbuild": "npm run webpack",
     "frontend": "webpack serve --open",
     "backend": "node index.js",
-    "start": "npm run backend"
+    "start": "npm run backend",
+    "migratedb": "knex migrate:latest",
+    "rollbackdb": "knex migrate:rollback",
+    "resetdb": "npm run rollbackdb && npm run migratedb"
   },
   "devDependencies": {
     "@babel/core": "7.17.8",
@@ -39,10 +42,14 @@
     "webpack-dev-server": "4.7.4"
   },
   "dependencies": {
+    "@vscode/sqlite3": "^5.0.8",
     "axios": "0.26.1",
-    "cors": "2.8.5",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
     "express": "4.17.3",
+    "helmet": "^5.0.2",
     "jsonwebtoken": "8.5.1",
+    "knex": "^1.0.4",
     "prop-types": "15.8.1",
     "react": "18.0.0",
     "react-dom": "18.0.0",

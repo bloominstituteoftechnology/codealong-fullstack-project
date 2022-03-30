@@ -14,5 +14,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "rules": {}
+  "rules": {
+    "semi": ["error", "never"]
+  }
 }

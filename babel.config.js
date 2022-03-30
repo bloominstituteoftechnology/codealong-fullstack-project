@@ -21,7 +21,7 @@ module.exports = {
       ],
       presets: [
         [PRESET_REACT],
-        [PRESET_ENV, { targets: { chrome: '96' } }]
+        [PRESET_ENV, { targets: { chrome: '99' } }]
       ]
     },
     production: {
@@ -30,7 +30,7 @@ module.exports = {
       ],
       presets: [
         [PRESET_REACT],
-        [PRESET_ENV, { targets: { chrome: '96' } }]
+        [PRESET_ENV, { targets: { chrome: '99' } }]
       ]
     },
   }
