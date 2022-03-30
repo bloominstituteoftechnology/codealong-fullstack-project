@@ -7,7 +7,7 @@ module.exports = function (req, res, next) {
     (req.body.username.length < 2) ||
     (req.body.password.length < 2)
   ) {
-    res.status(400).json({ message: 'username and password required' })
+    next({ message: 'username and password required', status: 422 })
   } else {
     next()
   }

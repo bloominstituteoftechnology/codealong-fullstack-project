@@ -5,7 +5,7 @@ module.exports = async function (req, res, next) {
   const user = await User.getByUsername(username)
 
   if (!user) {
-    res.status(400).json({ message: 'invalid credentials' })
+    next({ message: 'invalid credentials', status: 401 })
   } else {
     req.user = user
     next()

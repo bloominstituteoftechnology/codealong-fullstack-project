@@ -12,4 +12,10 @@ server.use(express.json())
 
 server.use('/api/auth', validate, authRouter)
 
+server.use((err, req, res, next) => { // eslint-disable-line
+  res.status(500 || err.status).json({
+    message: err.message,
+  })
+})
+
 module.exports = server
