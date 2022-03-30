@@ -1,4 +1,4 @@
-const User = require('../user/user-model.js')
+const User = require('../users/users-model.js')
 
 module.exports = async function (req, res, next) {
   const { username } = req.body
