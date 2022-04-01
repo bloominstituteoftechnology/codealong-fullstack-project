@@ -15,3 +15,5 @@
 - Run `npm run resetdb`.
 - Launch the project in a development server executing `npm run dev`.
 - Visit your app by navigating Chrome to `http://localhost:3000`.
+
+See the `package.json` to find all available scripts.
